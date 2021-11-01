@@ -24,10 +24,10 @@ $(function () {
         var text1 = $('input[name="text1"]').val();
         var select1 = $('[name="select1"] option:selected').val();
         var text10 = $('input[name="text10"]').val();
-        var total = $('[name="total"]').val();
-        
+        //var total = $('[name="total"]').val();
+        var UnitPrice = $('[name="UnitPrice"]').val();
         //var result2 = $('#quantity').val() * $('#price').val();
-        var result2 = ( $('#BillingAmount').val() - $('#BasicPrice').val() ) / $('#quantity').val() ;
+        var result = ( $('#BillingAmount').val() - $('#BasicPrice').val() ) / $('#quantity').val() ;
 
         //練習エリア終了
         
@@ -39,10 +39,10 @@ $(function () {
         })
         names = names.slice(0, -1);
       
-        if (result2 < 100) {
-                var msg = `99以下です\n文字入力テスト：${text1}\nバリデーションテスト：${text10}\n合計金額total：${total}\n合計金額result2：${result2}\n選択肢テスト：${select1}\n希望日：${date}\n人数：${number}\n氏名：${names}`;                  
+        if (result < 100) {
+                var msg = `99以下です\n文字入力テスト：${text1}\nバリデーションテスト：${text10}\n合計金額total：${UnitPrice}\n合計金額result2：${result}\n選択肢テスト：${select1}\n希望日：${date}\n人数：${number}\n氏名：${names}`;                  
         } else {
-                var msg = `100以上です\n文字入力テスト：${text1}\nバリデーションテスト：${text10}\n合計金額total：${total}\n合計金額result2：${result2}\n選択肢テスト：${select1}\n希望日：${date}\n人数：${number}\n氏名：${names}`;                 
+                var msg = `100以上です\n文字入力テスト：${text1}\nバリデーションテスト：${text10}\n合計金額total：${UnitPrice}\n合計金額result2：${result}\n選択肢テスト：${select1}\n希望日：${date}\n人数：${number}\n氏名：${names}`;                 
             }
         
         sendText(msg);
@@ -50,7 +50,7 @@ $(function () {
         
         //メッセージ2通目送信検証用_開始
         
-        if (result2 < 100) {
+        if (result < 100) {
                 var msg2 = `99以下です`;             
         } else {
                 var msg2 = `100以上です`; 
