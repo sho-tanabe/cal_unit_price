@@ -26,8 +26,8 @@ $(function () {
         var text10 = $('input[name="text10"]').val();
         var total = $('[name="total"]').val();
         
-        var result2 = $('#quantity').val() * $('#price').val();
-        
+        //var result2 = $('#quantity').val() * $('#price').val();
+        var result2 = ( $('#BillingAmount').val() - $('#BasicPrice').val() ) / $('#quantity').val() ;
 
         //練習エリア終了
         
