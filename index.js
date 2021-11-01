@@ -74,7 +74,7 @@ $(function () {
 //        if (result < 250) {
 //                var msg = `AAAランク`;             
 //        } else {
-//                var msg = `250以上です`; 
+//                var msg = `Bランク`; 
 //            }
 //        sendText2(msg);
         
