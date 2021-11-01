@@ -32,7 +32,7 @@ $(function () {
         var UnitPrice = $('[name="UnitPrice"]').val();
 
         //var result2 = $('#quantity').val() * $('#price').val();
-        var result = ( $('#BillingAmount').val() - $('#BasicCharge').val() ) / $('#quantity').val() ;
+        var result = ( $('#BillingAmount').val() - $('#BasicCharge').val() ) / $('#quantity').val();
 
         //練習エリア終了
         
@@ -44,7 +44,7 @@ $(function () {
         })
         names = names.slice(0, -1);
       
-        if (result < ２５0) {
+        if (result < ２５0){
             var msg = `99以下です\nご請求予定金額(円):${BillingAmount}\n基本料金(円):${BasicCharge}\n今回ご使用量(㎥):${quantity}\nガス料金単価:${result}`;
             var msg2 = `AAAランク`; 
         } else {
