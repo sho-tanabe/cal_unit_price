@@ -27,7 +27,7 @@ $(function () {
         //var total = $('[name="total"]').val();
         var UnitPrice = $('[name="UnitPrice"]').val();
         //var result2 = $('#quantity').val() * $('#price').val();
-        var result = ( $('#BillingAmount').val() - $('#BasicPrice').val() ) / $('#quantity').val() ;
+        var result = ( $('#BillingAmount').val() - $('#BasicCharge').val() ) / $('#quantity').val() ;
 
         //練習エリア終了
         
