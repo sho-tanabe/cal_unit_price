@@ -44,12 +44,12 @@ $(function () {
         })
         names = names.slice(0, -1);
       
-        if (result < 100) {
+        if (result < ２５0) {
             var msg = `99以下です\nご請求予定金額(円):${BillingAmount}\n基本料金(円):${BasicCharge}\n今回ご使用量(㎥):${quantity}\nガス料金単価:${result}`;
-            var msg2 = `99以下です`; 
+            var msg2 = `AAAランク`; 
         } else {
-            var msg = `１００以上です\nご請求予定金額(円):${BillingAmount}\n基本料金(円):${BasicCharge}\n今回ご使用量(㎥):${quantity}\nガス料金単価:${result}`;
-            var msg2 = `１００以上です`; 
+            var msg = `25０以上です\nご請求予定金額(円):${BillingAmount}\n基本料金(円):${BasicCharge}\n今回ご使用量(㎥):${quantity}\nガス料金単価:${result}`;
+            var msg2 = `25０以上です`; 
         }
         
         sendText(msg);
