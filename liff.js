@@ -88,7 +88,8 @@ function update_field(){
 //    var result2 = $('#quantity').val() * $('#price').val();
 //    $('#total').text(result2);
     
-    var result = ( $('#BillingAmount').val() - $('#BasicPrice').val() ) / $('#quantity').val() ;
+//    var result = ( $('#BillingAmount').val() - $('#BasicPrice').val() ) / $('#quantity').val() ;
+    var result =  $('#BillingAmount').val() - $('#BasicPrice').val();
     $('#UnitPrice').text(result);
     
     
