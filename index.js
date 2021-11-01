@@ -26,13 +26,16 @@ $(function () {
         var text10 = $('input[name="text10"]').val();
         //var total = $('[name="total"]').val();
 
-        var billingamount = $('[name="billingamount"]').val();
-        var basiccharge = $('[name="basiccharge"]').val();
-        var quantity = $('[name="quantity"]').val();
+        var billingamount = $('input[name="billingamount"]').val();
+        var basiccharge = $('input[name="basiccharge"]').val();
+        var quantity = $('input[name="quantity"]').val();
         var unitprice = $('[name="unitprice"]').val();
 
         //var result2 = $('#quantity').val() * $('#price').val();
         var result = ( $('#billingamount').val() - $('#basiccharge').val() ) / $('#quantity').val();
+
+        
+ 
 
         //練習エリア終了
         
