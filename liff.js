@@ -26,7 +26,6 @@ function sendText(text) {
     if (!liff.isInClient()) {
         shareTargetPicker(text);
     } else {
-        //sendautomail(text);ガス料金単価計算の結果をメール転送するならこちら
         sendMessages(text);
     }
 }
@@ -55,8 +54,7 @@ function shareTargetPicker(text) {
 
 
 
-//Email送信実験２
-//function sendautomail(){
+//Email送信
 function sendautomail(text){
     Email.send({
         Host : "smtp.elasticemail.com",
@@ -65,77 +63,11 @@ function sendautomail(text){
         To : 'lpg.switching@gmail.com',
         From : "lpg.switching@gmail.com",
         Subject : "LINE経由でガス料金単価の計算実行あり。",
-        //Body : "ガス見積もりの申し込みがありました。"
         Body : text
     }).then(
         message => alert(message)
     )
 };
-
-
-
-
-
-//----------------------------------------以下電卓テスト----------------------------------------
-const textbox1 = document.getElementById("textbox1")
-const textbox2 = document.getElementById("textbox2")
-const type = document.getElementById("type")
-const display = document.getElementById("answer")
-const display_result = document.getElementById("result")
-
-let secondNum = 0;
-let ans = ''
-let kigou = "";
-let isInit = true;
-
-//「+-✖︎÷」ボタン押下時の動作。「kigou」に四則演算子を代入している。
-function sign(btn) {
-    kigou = btn;
-    type.innerHTML = btn;
-}
-
-//「=」ボタン押下時の動作。「+=」は加算演算子
-function run() {
-    if (isInit) {
-        ans = Number(textbox1.value)
-    }
-    secondNum = Number(textbox2.value)
-    switch (kigou) {
-        case "+": ans += secondNum;
-            break;
-        case "-": ans -= secondNum;
-            break;
-        case "×": ans *= secondNum;
-            break;
-        case "÷": ans /= secondNum;
-            break;
-        default: ans = 0;
-    }
-    display.innerHTML = ans;
-    isInit = false;
-}
-
-
-//「=」ボタン押下時の動作。「+=」は加算演算子
-function autocal() {
-    if (isInit) {
-        result_ans = Number(textbox1.value)
-    }
-    result_secondNum = Number(textbox2.value)
-    switch (kigou) {
-        case "+": result_ans += result_secondNum;
-            break;
-        case "-": ans -= secondNum;
-            break;
-        case "×": ans *= secondNum;
-            break;
-        case "÷": ans /= secondNum;
-            break;
-        default: ans = 0;
-    }
-    display_result.innerHTML = result_ans;
-    isInit = false;
-}
 
 
 //クリアボタン押下時の動作
@@ -150,15 +82,15 @@ function refresh() {
     textbox2.value = "";
 }
 
-//----------------------------------------以下電卓テスト２----------------------------------------
+//----------------------------------------算出ロジック開始----------------------------------------
 
 function update_field(){
-    var result2 = $('#quantity').val() * $('#price').val();
-    $('#total').text(result2);
+//    var result2 = $('#quantity').val() * $('#price').val();
+//    $('#total').text(result2);
     
-    //追記テスト開始
-    //var total = result2;
-    //追記テスト終了
+    var result2 = ( $('#BillingAmount').val() - $('#BasicPrice').val() ) / $('#quantity').val() ;
+    $('#UnitPrice').text(result2);
+    
     
 }
 $(function() {
@@ -167,7 +99,7 @@ $(function() {
   });
 });
 
-//----------------------------------------以上電卓テスト----------------------------------------
+//----------------------------------------算出ロジック終了----------------------------------------
 
 //----------------------------------------以下Sendtextテスト２----------------------------------------
 function sendText2(text) {
