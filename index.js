@@ -50,12 +50,12 @@ $(function () {
         
         //メッセージ2通目送信検証用_開始
         
-        if (result < 100) {
-                var msg2 = `99以下です`;             
-        } else {
-                var msg2 = `100以上です`; 
-            }
-        sendText2(msg2);
+//        if (result < 100) {
+//                var msg2 = `99以下です`;             
+//        } else {
+//                var msg2 = `100以上です`; 
+//            }
+//        sendText2(msg2);
         
         //メッセージ2通目送信検証用_終了
 
