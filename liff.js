@@ -105,7 +105,11 @@ $(function() {
 //----------------------------------------以下Sendtextテスト２----------------------------------------
 function sendText2(text) {
     if (!liff.isInClient()) {
-        shareTargetPicker2(text);
+//        shareTargetPicker2(text);
+        liff.openWindow({
+            url: "https://docs.google.com/forms/d/e/1FAIpQLSd7p3Y8Vs9AnHgqyb4Mi2_GI9qFORTJ-DTC8XdjZB4WSJU9kA/viewform",
+            external: true
+        });
     } else {
         sendMessages2(text);
     }
