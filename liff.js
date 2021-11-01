@@ -34,7 +34,8 @@ function sendText(text) {
 //WEBブラウザアクセスの場合の動作↑
     } else {
         sendMessages(text);
-        sendLineNotifyMessage();//実験中。
+//        sendLineNotifyMessage();//実験中。
+        myFunction();//実験中２。
     }
 }
 
@@ -158,3 +159,22 @@ function sendLineNotifyMessage(){
     });
 }
 //----------------------------------------以上LINE Notifyテスト----------------------------------------
+//----------------------------------------以下LINE Notifyテスト2----------------------------------------
+function sendHttpPost(message){
+  var token = ["BV9ydCSRx6vixlkyLi5H41JFT4q1DKBFrGy7h95dNkm"];
+  var options =
+   {
+     "method"  : "post",
+     "payload" : "message=" + message,
+     "headers" : {"Authorization" : "Bearer "+ token}
+
+   };
+
+   UrlFetchApp.fetch("https://notify-api.line.me/api/notify",options);
+}
+
+function myFunction(){
+  var message="Google App Srciptから送信" ;
+  sendHttpPost(message);
+}
+//----------------------------------------以上LINE Notifyテスト2----------------------------------------
