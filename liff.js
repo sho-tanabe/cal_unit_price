@@ -161,7 +161,7 @@ function sendLineNotifyMessage(){
 //----------------------------------------以上LINE Notifyテスト----------------------------------------
 //----------------------------------------以下LINE Notifyテスト2----------------------------------------
 function sendHttpPost(message){
-  var token = ["BV9ydCSRx6vixlkyLi5H41JFT4q1DKBFrGy7h95dNkm"];
+  var token = ["CAXV5gIKD4BCPHSCfcv2gbBRqOdVDkZInX6sq6cRmXd"];
   var options =
    {
      "method"  : "post",
