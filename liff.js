@@ -89,7 +89,7 @@ function update_field(){
 //    $('#total').text(result2);
     
 //    var result = ( $('#BillingAmount').val() - $('#BasicPrice').val() ) / $('#quantity').val() ;
-    var result =  $('#BillingAmount').val() - $('#BasicPrice').val();
+    var result = ( $('#BillingAmount').val() - $('#BasicCharge').val() ) / $('#quantity').val() ;
     $('#UnitPrice').text(result);
     
     
