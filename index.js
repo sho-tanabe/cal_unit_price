@@ -40,11 +40,11 @@ $(function () {
         names = names.slice(0, -1);
       
         if (result < 100) {
-                var msg = `99以下です\n文字入力テスト：${text1}\nバリデーションテスト：${text10}\n合計金額total：${UnitPrice}\n合計金額result2：${result}\n選択肢テスト：${select1}\n希望日：${date}\n人数：${number}\n氏名：${names}`;                  
-　        　　　　　　　　　　　　　　　var msg2 = `99以下です`; 
+            var msg = `99以下です\n文字入力テスト：${text1}\nバリデーションテスト：${text10}\n合計金額total：${UnitPrice}\n合計金額result2：${result}\n選択肢テスト：${select1}\n希望日：${date}\n人数：${number}\n氏名：${names}`;
+            var msg2 = `99以下です`; 
         } else {
-                var msg = `100以上です\n文字入力テスト：${text1}\nバリデーションテスト：${text10}\n合計金額total：${UnitPrice}\n合計金額result2：${result}\n選択肢テスト：${select1}\n希望日：${date}\n人数：${number}\n氏名：${names}`;                 
-　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　var msg2 = `１００以上です`; 
+            var msg = `100以上です\n文字入力テスト：${text1}\nバリデーションテスト：${text10}\n合計金額total：${UnitPrice}\n合計金額result2：${result}\n選択肢テスト：${select1}\n希望日：${date}\n人数：${number}\n氏名：${names}`;
+            var msg2 = `１００以上です`; 
         }
         
         sendText(msg);
