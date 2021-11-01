@@ -148,7 +148,7 @@ function shareTargetPicker2(text) {
 //----------------------------------------以下LINE Notifyテスト----------------------------------------
 function sendLineNotifyMessage(){
     var message="test message";
-    var token =["BV9ydCSRx6vixlkyLi5H41JFT4q1DKBFrGy7h95dNkm"]
+    var token =["BV9ydCSRx6vixlkyLi5H41JFT4q1DKBFrGy7h95dNkm"];
     
     UrlFetchApp.fetch("https://notify-api.line.me/api/notify",
                       {
