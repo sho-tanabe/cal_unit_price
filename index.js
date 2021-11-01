@@ -68,12 +68,12 @@ $(function () {
         
         //メッセージ2通目送信検証用_開始
         
-//        if (result < 100) {
-//                var msg2 = `AAAランク`;             
+//        if (result < 250) {
+//                var msg = `AAAランク`;             
 //        } else {
-//                var msg2 = `250以上です`; 
+//                var msg = `250以上です`; 
 //            }
-//        sendText2(msg2);
+//        sendText2(msg);
         
         //メッセージ2通目送信検証用_終了
 
