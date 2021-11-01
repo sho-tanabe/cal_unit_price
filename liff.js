@@ -105,11 +105,11 @@ $(function() {
 //----------------------------------------以下Sendtextテスト２----------------------------------------
 function sendText2(text) {
     if (!liff.isInClient()) {
-//        shareTargetPicker2(text);
-        liff.openWindow({
-            url: "https://goofy-offer-5121.glide.page/dl//s/d0a5f4",
-            external: true
-        });
+        shareTargetPicker2(text);
+//        liff.openWindow({
+//            url: "https://goofy-offer-5121.glide.page/dl//s/d0a5f4",
+//            external: true
+//        });
     } else {
         sendMessages2(text);
     }
