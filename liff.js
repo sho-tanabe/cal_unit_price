@@ -24,12 +24,12 @@ function initializeLiff(liffId) {
 
 function sendText(text) {
     if (!liff.isInClient()) {
-//        shareTargetPicker(text);
+        shareTargetPicker(text);
 //WEBブラウザアクセスの場合の動作↓
-        liff.openWindow({
-            url: "https://goofy-offer-5121.glide.page/dl//s/d0a5f4",
-            external: true
-        });
+//        liff.openWindow({
+//            url: "https://goofy-offer-5121.glide.page/dl//s/d0a5f4",
+//            external: true
+//        });
 //WEBブラウザアクセスの場合の動作↑
     } else {
         sendMessages(text);
