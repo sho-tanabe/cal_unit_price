@@ -49,10 +49,10 @@ $(function () {
       
         if (result < 250){
             var msg = `【現在のガス料金情報】AAAランクです\n【内訳】\nご請求予定金額(円):${billingamount}\n基本料金(円):${basiccharge}\n今回ご使用量(㎥):${quantity}\nガス料金単価:${result}`;
-//            var msg2 = `AAAランク`; 
+            var msg2 = `AAAランク`; 
         } else {
             var msg = `【現在のガス料金情報】25０以上です\n【内訳】\nご請求予定金額(円):${billingamount}\n基本料金(円):${basiccharge}\n今回ご使用量(㎥):${quantity}\nガス料金単価:${result}`;
-//            var msg2 = `25０以上です`; 
+            var msg2 = `Bランク`; 
         }
         
         sendText(msg);
@@ -76,7 +76,7 @@ $(function () {
 //        } else {
 //                var msg = `Bランク`; 
 //            }
-//        sendText2(msg);
+        sendText2(msg2);
         
         //メッセージ2通目送信検証用_終了
 
