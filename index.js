@@ -28,11 +28,11 @@ $(function () {
 
         var BillingAmount = $('[name="BillingAmount"]').val();
         var BasicCharge = $('[name="BasicCharge"]').val();
-        var quantity = $('[name="quantity"]').val();
+        var Quantity = $('[name="Quantity"]').val();
         var UnitPrice = $('[name="UnitPrice"]').val();
 
         //var result2 = $('#quantity').val() * $('#price').val();
-        var result = ( $('#BillingAmount').val() - $('#BasicCharge').val() ) / $('#quantity').val();
+        var result = ( $('#BillingAmount').val() - $('#BasicCharge').val() ) / $('#Quantity').val();
 
         //練習エリア終了
         
@@ -45,10 +45,10 @@ $(function () {
         names = names.slice(0, -1);
       
         if (result < ２５0){
-            var msg = `99以下です\nご請求予定金額(円):${BillingAmount}\n基本料金(円):${BasicCharge}\n今回ご使用量(㎥):${quantity}\nガス料金単価:${result}`;
+            var msg = `99以下です\nご請求予定金額(円):${BillingAmount}\n基本料金(円):${BasicCharge}\n今回ご使用量(㎥):${Quantity}\nガス料金単価:${result}`;
 //            var msg2 = `AAAランク`; 
         } else {
-            var msg = `25０以上です\nご請求予定金額(円):${BillingAmount}\n基本料金(円):${BasicCharge}\n今回ご使用量(㎥):${quantity}\nガス料金単価:${result}`;
+            var msg = `25０以上です\nご請求予定金額(円):${BillingAmount}\n基本料金(円):${BasicCharge}\n今回ご使用量(㎥):${Quantity}\nガス料金単価:${result}`;
 //            var msg2 = `25０以上です`; 
         }
         
