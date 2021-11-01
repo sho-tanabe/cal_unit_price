@@ -47,11 +47,11 @@ $(function () {
         })
         names = names.slice(0, -1);
       
-        if (result < 250){
-            var msg = `【現在のガス料金情報】\nAAAランク\n【内訳】\nご請求予定金額(円):${billingamount}\n基本料金(円):${basiccharge}\n今回ご使用量(㎥):${quantity}\nガス料金単価:${result}`;
-            var msg2 = `AAAランク`; 
+        if (result < 280){
+            var msg = `【現在のガス料金情報】\nAAAランク\n【内訳】\nご請求予定金額(円):${billingamount}\n基本料金(円):${basiccharge}\n今回ご使用量(㎥):${quantity}\nガス料金単価:${result}\n安くなる金額:`;
+            var msg2 = `Sランク`; 
         } else {
-            var msg = `【現在のガス料金情報】\nBランク\n【内訳】\nご請求予定金額(円):${billingamount}\n基本料金(円):${basiccharge}\n今回ご使用量(㎥):${quantity}\nガス料金単価:${result}`;
+            var msg = `【現在のガス料金情報】\nBランク\n【内訳】\nご請求予定金額(円):${billingamount}\n基本料金(円):${basiccharge}\n今回ご使用量(㎥):${quantity}\nガス料金単価:${result}\n安くなる金額:`;
             var msg2 = `Bランク`; 
         }
         
