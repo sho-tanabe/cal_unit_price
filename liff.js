@@ -35,7 +35,7 @@ function sendText(text) {
     } else {
         sendMessages(text);
 //        sendLineNotifyMessage();//実験中。
-        myFunction();//実験中２。
+//        myFunction();//実験中２。
     }
 }
 
