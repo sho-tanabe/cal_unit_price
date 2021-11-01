@@ -25,7 +25,12 @@ $(function () {
         var select1 = $('[name="select1"] option:selected').val();
         var text10 = $('input[name="text10"]').val();
         //var total = $('[name="total"]').val();
+
+        var BillingAmount = $('[name="BillingAmount"]').val();
+        var BasicCharge = $('[name="BasicCharge"]').val();
+        var quantity = $('[name="quantity"]').val();
         var UnitPrice = $('[name="UnitPrice"]').val();
+
         //var result2 = $('#quantity').val() * $('#price').val();
         var result = ( $('#BillingAmount').val() - $('#BasicCharge').val() ) / $('#quantity').val() ;
 
@@ -40,15 +45,25 @@ $(function () {
         names = names.slice(0, -1);
       
         if (result < 100) {
-            var msg = `99以下です\n文字入力テスト：${text1}\nバリデーションテスト：${text10}\n合計金額total：${UnitPrice}\n合計金額result2：${result}\n選択肢テスト：${select1}\n希望日：${date}\n人数：${number}\n氏名：${names}`;
+            var msg = `99以下です\nご請求予定金額(円):${BillingAmount}\n基本料金(円):${BasicCharge}\n今回ご使用量(㎥):${quantity}\nガス料金単価:${UnitPrice}`;
             var msg2 = `99以下です`; 
         } else {
-            var msg = `100以上です\n文字入力テスト：${text1}\nバリデーションテスト：${text10}\n合計金額total：${UnitPrice}\n合計金額result2：${result}\n選択肢テスト：${select1}\n希望日：${date}\n人数：${number}\n氏名：${names}`;
-            var msg2 = `１００以上です`; 
+//            var msg = `100以上です\n文字入力テスト：${text1}\nバリデーションテスト：${text10}\n合計金額total：${UnitPrice}\n合計金額result2：${result}\n選択肢テスト：${select1}\n希望日：${date}\n人数：${number}\n氏名：${names}`;
+            var msg2 = `１００以上です\nご請求予定金額(円):${BillingAmount}\n基本料金(円):${BasicCharge}\n今回ご使用量(㎥):${quantity}\nガス料金単価:${UnitPrice}`; 
         }
         
         sendText(msg);
         sendText(msg2);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         
         //メッセージ2通目送信検証用_開始
