@@ -53,7 +53,7 @@ $(function () {
         }
         
         sendText(msg);
-        sendText(msg2);
+//        sendText(msg2);
         
         
         
@@ -73,7 +73,7 @@ $(function () {
 //        } else {
 //                var msg2 = `100以上です`; 
 //            }
-//        sendText2(msg2);
+        sendText2(msg2);
         
         //メッセージ2通目送信検証用_終了
 
