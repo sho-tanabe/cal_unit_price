@@ -35,9 +35,15 @@ $(function () {
         var result = ( $('#billingamount').val() - $('#basiccharge').val() ) / $('#quantity').val();
 
         var costcut = (result - 280) * $('#quantity').val();
-//        var costcut = Math.floor( (result - 280) * $('#quantity').val() );//切り捨てテスト
-        var costcutround = Math.floor(costcut / 1000) * 1000;
- 
+//        var costcutround = Math.floor(costcut / 1000) * 1000;
+
+        if (costcut < 1000){
+            var costcutround = `判定結果をご確認ください(${costcut})`
+        }　else if (costcut < 10000){
+            var costcutround = Math.floor(costcut / 100) * 100
+            } else {
+                var costcutround = Math.floor(costcut / 1000) * 1000
+                }
 
         //練習エリア終了
         
