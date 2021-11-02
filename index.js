@@ -36,7 +36,7 @@ $(function () {
 
         var costcut = (result - 280) * $('#quantity').val();
 //        var costcut = Math.floor( (result - 280) * $('#quantity').val() );//切り捨てテスト
-        var costcutround = Math.floor(costcut * 100)/100;
+        var costcutround = Math.floor(costcut / 100) * 100;
  
 
         //練習エリア終了
