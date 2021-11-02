@@ -32,8 +32,9 @@
             <input type="text" class="form-control p-postal-code w-75 mx-auto" size="8" maxlength="7"　placeholder="0000000">
             <br>
             <p class="w-100 mx-3">都道府県<font size="-2" color="violet"> *手動での選択も可能です。</font></p>
-            <select id="address1" name="address1" class="form-control p-region-id w-75 mx-auto">
-                <option value="">--</option>
+            <select id="address1" name="address1" class="form-control p-region-id w-75 mx-auto" required>
+                <div class="invalid-feedback">必須入力です。</div>
+                <option value=""></option>
                 <option value="1">北海道</option>
                 <option value="2">青森県</option>
                 <option value="3">岩手県</option>
@@ -100,13 +101,15 @@
         <div class="calculation" style="background-color: #eee;">
             <p class="w-100 mx-3"><font size="+2">現在のガス料金情報</font></p>
             <p class="w-100 mx-3">ご請求予定金額(円)</p>
-            <input class="form-control w-75 mx-auto" id="billingamount" name="billingamount" type="number" maxlength="10" value="0" min="1"　placeholder="00000">
+            <input class="form-control w-75 mx-auto" id="billingamount" name="billingamount" type="number" maxlength="10" placeholder="00000" required>
+            <div class="invalid-feedback">必須入力です。</div>
             <br>
             <p class="w-100 mx-3">基本料金(円)</p>
-            <input class="form-control w-75 mx-auto" id="basiccharge" name="basiccharge" type="number" maxlength="10" value="0" min="0"　placeholder="00000" required>
+            <input class="form-control w-75 mx-auto" id="basiccharge" name="basiccharge" type="number" maxlength="10" placeholder="00000">
             <br>
             <p class="w-100 mx-3">今回ご使用量(㎥)</p>
-            <input class="form-control w-75 mx-auto" id="quantity" name="quantity" type="number" maxlength="10" value="0"  min="1"　placeholder="00000">
+            <input class="form-control w-75 mx-auto" id="quantity" name="quantity" type="number" maxlength="10" placeholder="00000" required>
+            <div class="invalid-feedback">必須入力です。</div>
             <br>
             <p class="w-100 mx-3">ガス料金単価(円)</p>
             <p class="w-75 mx-auto" id="unitprice" name="unitprice" value="0"></p>
