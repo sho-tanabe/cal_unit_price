@@ -35,7 +35,7 @@ $(function () {
         var result = ( $('#billingamount').val() - $('#basiccharge').val() ) / $('#quantity').val();
 
 //        var costcut = (result - 280) * $('#quantity').val();
-        var costcut = Math.floor( (result - 280) * $('#quantity').val(); )//切り捨てテスト
+        var costcut = Math.floor( (result - 280) * $('#quantity').val() );//切り捨てテスト
  
 
         //練習エリア終了
