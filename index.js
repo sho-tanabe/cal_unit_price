@@ -28,17 +28,18 @@ $(function () {
         var date = $('input[name="date"]').val();
         var number = $('input[name="number"]:checked').val();
         
-        var address1num = $('[name="address1"] option:selected').val();//番号が表示される。後続の判定用。
-        var address1 = $('[name="address1"] option:selected').text();//区分値に紐づく表示項目が表示される。
-        var address2 = $('input[name="address2"]').val();
-        var address3 = $('input[name="address3"]').val();
-        
         var names = '';
         $('#form-name').children().each(function (i, elm) {
             names += $(elm).val() + '、';
         })
         names = names.slice(0, -1);
         //練習エリア終了
+        
+        //住所項目
+        var address1num = $('[name="address1"] option:selected').val();//番号が表示される。後続の判定用。
+        var address1 = $('[name="address1"] option:selected').text();//区分値に紐づく表示項目が表示される。
+        var address2 = $('input[name="address2"]').val();
+        var address3 = $('input[name="address3"]').val();
         
         //計算要素項目
         var billingamount = $('input[name="billingamount"]').val();
