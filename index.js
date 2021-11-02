@@ -29,7 +29,7 @@ $(function () {
         var number = $('input[name="number"]:checked').val();
 
 //        var address = $('input[name="address"]').val();
-        var address = `住所情報貼り付けテスト中`;
+//        var address = `住所情報貼り付けテスト中`;
         
         var names = '';
         $('#form-name').children().each(function (i, elm) {
@@ -64,7 +64,7 @@ $(function () {
                 var costcutmsg = `約${costcutfloor}円程度`;
                 }                
         
-        var msg = `【現在のガス料金情報】\nお住まいの地域:${address}\nご請求予定金額(円):${billingamount}\n基本料金(円):${basiccharge}\n今回ご使用量(㎥):${quantity}\nガス料金単価:${resultround}\n-----------\n【お安くなる金額目安】\n${costcutmsg}`;
+        var msg = `【現在のガス料金情報】\nお住まいの地域:\nご請求予定金額(円):${billingamount}\n基本料金(円):${basiccharge}\n今回ご使用量(㎥):${quantity}\nガス料金単価:${resultround}\n-----------\n【お安くなる金額目安】\n${costcutmsg}`;
         
         if (difference < 280){
             var msg2 = `Sランク`; 
