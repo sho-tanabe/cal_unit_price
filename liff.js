@@ -95,12 +95,14 @@ function refresh() {
 //----------------------------------------算出ロジック開始----------------------------------------
 
 function update_field(){
-//    var result2 = $('#quantity').val() * $('#price').val();
-//    $('#total').text(result2);
+//    var result = ( $('#billingamount').val() - $('#basiccharge').val() ) / $('#quantity').val() ;
+//    $('#unitprice').text(result);
+
     
-//    var result = ( $('#BillingAmount').val() - $('#BasicPrice').val() ) / $('#quantity').val() ;
-    var result = ( $('#billingamount').val() - $('#basiccharge').val() ) / $('#quantity').val() ;
+    var resultabout = ( $('#billingamount').val() - $('#basiccharge').val() ) / $('#quantity').val() ;
+    var result = `${resultabout}円`;
     $('#unitprice').text(result);
+
     
     
 }
