@@ -41,11 +41,11 @@ $(function () {
         var unitprice = $('[name="unitprice"]').val();
 
         //算出結果
-        var result = ( $('#billingamount').val() - $('#basiccharge').val() ) / $('#quantity').val();
-        var resultround = Math.floor(result);
+        var difference = ( $('#billingamount').val() - $('#basiccharge').val() ) / $('#quantity').val();
+        var resultround = Math.floor(difference);
 
         //コスト削減予定額
-        var costcut = (result - 280) * $('#quantity').val();
+        var costcut = (difference - 280) * $('#quantity').val();
 
         //コスト削減予定額（LINEトーク送信用）
         if (costcut < 1000){
@@ -60,7 +60,7 @@ $(function () {
         
         var msg = `【現在のガス料金情報】\nご請求予定金額(円):${billingamount}\n基本料金(円):${basiccharge}\n今回ご使用量(㎥):${quantity}\nガス料金単価:${resultround}\n-----------\n【お安くなる金額目安】\n${costcutmsg}`;
         
-        if (result < 280){
+        if (difference < 280){
             var msg2 = `Sランク`; 
         } else {
             var msg2 = `Bランク`; 
