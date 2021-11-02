@@ -19,10 +19,10 @@
         <!--整列テスト開始-->
         <div class="h-adr">
             
-            <p class="w-25 mt-3 mx-auto">お住まいの地域</p>
+            <p class="w-75 mt-3 text-left">お住まいの地域</p>
             <span class="form-control p-country-name  w-25 mt-3 mx-auto" style="display:none;">Japan</span>
-            <p class="w-25 mt-3 mx-auto">郵便番号を入力すると住所が自動入力されます。</p>
-            〒<input type="text" class="p-postal-code  w-25 mt-3 mx-auto" size="8" maxlength="8"><br>
+            <p class="w-75 mt-3 text-left">郵便番号を入力すると住所が自動入力されます。</p>
+            〒<input type="text" class="p-postal-code  w-50 mt-3 mx-auto" size="8" maxlength="8"><br>
             <select id="address1" name="address1" class="form-control p-region-id  w-50 mt-3 mx-auto">
                 <option value="">--</option>
                 <option value="1">北海道</option>
@@ -74,13 +74,13 @@
                 <option value="47">沖縄県</option>
             </select><br>
             <input type="text" id="address2" name="address2" class="form-control p-locality p-street-address p-extended-address  w-75 mt-3 mx-auto"/><br>
-            <p class="w-25 mt-3 mx-auto">ご請求予定金額(円)</p>
+            <p class="w-25 mt-3 text-left">ご請求予定金額(円)</p>
             <input class="form-control w-25 mt-3 mx-auto" id="billingamount" name="billingamount" type="number" maxlength="10" value="0" min="1"><br>
-            <p class="w-25 mt-3 mx-auto">基本料金(円)</p>
+            <p class="w-25 mt-3 text-left">基本料金(円)</p>
             <input class="form-control w-25 mt-3 mx-auto" id="basiccharge" name="basiccharge" type="number" maxlength="10" value="0" min="0" required><br>
-            <p class="w-25 mt-3 mx-auto">今回ご使用量(㎥)</p>
+            <p class="w-25 mt-3 text-left">今回ご使用量(㎥)</p>
             <input class="form-control w-25 mt-3 mx-auto" id="quantity" name="quantity" type="number" maxlength="10" value="0"  min="1"><br>
-            <p class="w-25 mt-3 mx-auto">ガス料金単価</p>
+            <p class="w-25 mt-3 text-left">ガス料金単価</p>
             <span id="unitprice" name="unitprice" value="0"></span>円<br>
         </div>
         <!--整列テスト終了-->        
