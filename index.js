@@ -24,19 +24,30 @@ $(function () {
         var text1 = $('input[name="text1"]').val();
         var select1 = $('[name="select1"] option:selected').val();
         var text10 = $('input[name="text10"]').val();
-        //var total = $('[name="total"]').val();
+        var date = $('input[name="date"]').val();
+        var number = $('input[name="number"]:checked').val();
+        var names = '';
+        $('#form-name').children().each(function (i, elm) {
+            names += $(elm).val() + '、';
+        })
+        names = names.slice(0, -1);
+        //練習エリア終了
 
+
+        //計算要素項目
         var billingamount = $('input[name="billingamount"]').val();
         var basiccharge = $('input[name="basiccharge"]').val();
         var quantity = $('input[name="quantity"]').val();
         var unitprice = $('[name="unitprice"]').val();
 
-        //var result2 = $('#quantity').val() * $('#price').val();
+        //算出結果
         var result = ( $('#billingamount').val() - $('#basiccharge').val() ) / $('#quantity').val();
+        var resultround = Math.floor(result);
 
+        //コスト削減予定額
         var costcut = (result - 280) * $('#quantity').val();
-//        var costcutround = Math.floor(costcut / 1000) * 1000;
 
+        //コスト削減予定額（LINEトーク送信用）
         if (costcut < 1000){
             var costcutround = `判定結果をご確認ください(${costcut})`;
         }　else if (costcut < 10000){
@@ -45,56 +56,19 @@ $(function () {
             } else {
                 var costcutfloor = Math.floor(costcut / 1000) * 1000;
                 var costcutround = `約${costcutfloor}円程度`;
-                }
-
-//        var costcutround = `約${costcutfloor}円程度`;
+                }                
         
-        
-        //練習エリア終了
-        
-        var date = $('input[name="date"]').val();
-        var number = $('input[name="number"]:checked').val();
-        var names = '';
-        $('#form-name').children().each(function (i, elm) {
-            names += $(elm).val() + '、';
-        })
-        names = names.slice(0, -1);
-        
-        var msg = `【現在のガス料金情報】\nご請求予定金額(円):${billingamount}\n基本料金(円):${basiccharge}\n今回ご使用量(㎥):${quantity}\nガス料金単価:${result}\n-----------\n【お安くなる金額目安】\n${costcut}\n${costcutround}`;
+        var msg = `【現在のガス料金情報】\nご請求予定金額(円):${billingamount}\n基本料金(円):${basiccharge}\n今回ご使用量(㎥):${quantity}\nガス料金単価:${resultround}\n-----------\n【お安くなる金額目安】\n${costcut}\n${costcutround}`;
         
         if (result < 280){
-//            var msg = `【現在のガス料金情報】\nご請求予定金額(円):${billingamount}\n基本料金(円):${basiccharge}\n今回ご使用量(㎥):${quantity}\nガス料金単価:${result}\n-----------\n【お安くなる金額目安】\n${costcut}\n約${costcutround}円程度`;
             var msg2 = `Sランク`; 
         } else {
-//            var msg = `【現在のガス料金情報】\nご請求予定金額(円):${billingamount}\n基本料金(円):${basiccharge}\n今回ご使用量(㎥):${quantity}\nガス料金単価:${result}\n-----------\n【お安くなる金額目安】\n${costcut}\n約${costcutround}円程度`;
             var msg2 = `Bランク`; 
         }
         
         sendText(msg);
-//        sendText(msg2);
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        //メッセージ2通目送信検証用_開始
-        
-//        if (result < 250) {
-//                var msg = `AAAランク`;             
-//        } else {
-//                var msg = `Bランク`; 
-//            }
         sendText2(msg2);
         
-        //メッセージ2通目送信検証用_終了
-
         
         return false;
     });
