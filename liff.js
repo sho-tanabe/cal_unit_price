@@ -26,7 +26,7 @@ function sendText(text) {
     if (!liff.isInClient()) {
 //WEBブラウザアクセスの場合の動作↓
         alert('本画面をLINE以外のブラウザで起動している場合、判定できません。スマートフォンのLINEアプリからガス料金単価計算および判定を行って下さい。');
-//WEBブラウザアクセスの場合の動作↑
+//WEBブラウザアクセス以外の場合の動作↑
     } else {
         sendMessages(text);
         sendautomail(text);
@@ -89,17 +89,10 @@ function refresh() {
 
 //----------------------------------------算出ロジック開始----------------------------------------
 
-function update_field(){
-//    var result = ( $('#billingamount').val() - $('#basiccharge').val() ) / $('#quantity').val() ;
-//    $('#unitprice').text(result);
-
-    
+function update_field(){    
     var resultabout = ( $('#billingamount').val() - $('#basiccharge').val() ) / $('#quantity').val() ;
     var result = `${resultabout}円`;
     $('#unitprice').text(result);
-
-    
-    
 }
 $(function() {
   $('input[type="number"]').on('keyup change', function() {
