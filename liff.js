@@ -25,7 +25,7 @@ function initializeLiff(liffId) {
 function sendText(text) {
     if (!liff.isInClient()) {
 //WEBブラウザアクセスの場合の動作↓
-        alert('本画面をLINE以外のブラウザで起動している場合、判定できません。スマートフォンのLINEアプリからガス料金単価計算および判定を行って下さい。');
+        alert('本画面をLINE以外のブラウザで起動している場合、料金を診断できません。スマートフォンのLINEアプリから料金診断を行って下さい。');
 //WEBブラウザアクセス以外の場合の動作↑
     } else {
         sendMessages(text);
