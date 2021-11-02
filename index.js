@@ -72,7 +72,7 @@ $(function () {
 //            var msg2 = `Bランク`; 
 //        }
 
-        if(10 => address1num || address1num => 18 ){
+        if(7 => address1num || address1num => 15 ){
             var msg2 = `対象外地域`;
         }else if (difference < 280){
             var msg2 = `Sランク`; 
