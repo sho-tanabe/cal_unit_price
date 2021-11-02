@@ -12,20 +12,20 @@
 
 <body>
     <form class="w-75 mx-auto">
-
         <div class="alert alert-warning" role="alert">
             <font size="-1">
                     【STEP1】<br>
-                    お手元にガスの料金表(検針票)をご用意ください。<br>
-                    <br>
-                    【STEP2】<br>
-                    下記の各項目に該当値を入力してください。<br>
-                    <br>
-                    【STEP3】<br>
-                    現在のガス料金単価が算出されますので、「料金診断結果を見る」ボタンを押し、LINEトーク画面で結果を確認してください。
+                    お手元にガスの料金表(検針票)をご用意ください。
                 </font>
-        </div>        
-        
+        </div>
+        <br>
+        <div class="alert alert-warning" role="alert">
+            <font size="-1">
+                    【STEP2】<br>
+                    現在お住まいの地域について、下記の各項目を入力してください。郵便番号を入力すると住所が自動入力されます。
+            </font>
+        </div>
+        <br>
         <div class="h-adr" style="background-color: #eee;">
             <p class="w-100 mx-3"><font size="+2">現在お住まいの地域</font></p>
             <span class="form-control p-country-name mx-3 w-25 mt-3" style="display:none;">Japan</span>
@@ -82,27 +82,30 @@
                 <option value="46">鹿児島県</option>
                 <option value="47">沖縄県</option>
             </select><br>
-
             <p class="w-100 mx-3">市区町村<font size="-2" color="violet"> *手動での入力も可能です。</font></p>
-            <input type="text" id="address2" name="address2" class="form-control p-locality w-75 mx-auto"/><br>
-            
+            <input type="text" id="address2" name="address2" class="form-control p-locality w-75 mx-auto"/>
+            <br>            
             <p class="w-100 mx-3">町・番地<font size="-2" color="violet"> *手動での入力も可能です。</font></p>
-            <input type="text" id="address3" name="address3" class="form-control p-street-address p-extended-address  w-75 mx-auto"/><br>
+            <input type="text" id="address3" name="address3" class="form-control p-street-address p-extended-address  w-75 mx-auto"/>
+        </div>
+        <br>
+        <div class="alert alert-warning" role="alert">
+            <font size="-1">
+                    【STEP3】<br>
+                    下記の各項目に該当値を入力してください。<br>入力後、現在のガス料金単価が算出されますので、「料金診断結果を見る」ボタンを押し、LINEトーク画面で結果を確認してください。
+                </font>
         </div>
         <br>
         <div class="calculation" style="background-color: #eee;">
             <p class="w-100 mx-3"><font size="+2">現在のガス料金情報</font></p>
             <p class="w-100 mx-3">ご請求予定金額(円)</p>
-            <input class="form-control w-75 mx-auto" id="billingamount" name="billingamount" type="number" maxlength="10" value="0" min="1"　placeholder="00000"><br>
+            <input class="form-control w-75 mx-auto" id="billingamount" name="billingamount" type="number" maxlength="10" value="0" min="1"　placeholder="00000">
             <p class="w-100 mx-3">基本料金(円)</p>
-            <input class="form-control w-75 mx-auto" id="basiccharge" name="basiccharge" type="number" maxlength="10" value="0" min="0"　placeholder="00000" required><br>            
+            <input class="form-control w-75 mx-auto" id="basiccharge" name="basiccharge" type="number" maxlength="10" value="0" min="0"　placeholder="00000" required>
             <p class="w-100 mx-3">今回ご使用量(㎥)</p>
-            <input class="form-control w-75 mx-auto" id="quantity" name="quantity" type="number" maxlength="10" value="0"  min="1"　placeholder="00000"><br>
-            
+            <input class="form-control w-75 mx-auto" id="quantity" name="quantity" type="number" maxlength="10" value="0"  min="1"　placeholder="00000">
             <p class="w-100 mx-3">ガス料金単価(円)</p>
-            <!--<span class="w-75 mx-auto" id="unitprice" name="unitprice" value="0"></span><br>-->
-            <p class="w-75 mx-auto" id="unitprice" name="unitprice" value="0"></p><br>
-            
+            <p class="w-75 mx-auto" id="unitprice" name="unitprice" value="0"></p>
         </div>
         
         
