@@ -38,13 +38,18 @@ $(function () {
 //        var costcutround = Math.floor(costcut / 1000) * 1000;
 
         if (costcut < 1000){
-            var costcutround = `判定結果をご確認ください(${costcut})`
+            var costcutround = `判定結果をご確認ください(${costcut})`;
         }　else if (costcut < 10000){
-            var costcutround = Math.floor(costcut / 100) * 100
+            var costcutfloor = Math.floor(costcut / 100) * 100;
+            var costcutround = `約${costcutfloor}円程度`;
             } else {
-                var costcutround = Math.floor(costcut / 1000) * 1000
+                var costcutfloor = Math.floor(costcut / 1000) * 1000;
+                var costcutround = `約${costcutfloor}円程度`;
                 }
 
+//        var costcutround = `約${costcutfloor}円程度`;
+        
+        
         //練習エリア終了
         
         var date = $('input[name="date"]').val();
@@ -55,7 +60,7 @@ $(function () {
         })
         names = names.slice(0, -1);
         
-        var msg = `【現在のガス料金情報】\nご請求予定金額(円):${billingamount}\n基本料金(円):${basiccharge}\n今回ご使用量(㎥):${quantity}\nガス料金単価:${result}\n-----------\n【お安くなる金額目安】\n${costcut}\n約${costcutround}円程度`;
+        var msg = `【現在のガス料金情報】\nご請求予定金額(円):${billingamount}\n基本料金(円):${basiccharge}\n今回ご使用量(㎥):${quantity}\nガス料金単価:${result}\n-----------\n【お安くなる金額目安】\n${costcut}\n${costcutround}`;
         
         if (result < 280){
 //            var msg = `【現在のガス料金情報】\nご請求予定金額(円):${billingamount}\n基本料金(円):${basiccharge}\n今回ご使用量(㎥):${quantity}\nガス料金単価:${result}\n-----------\n【お安くなる金額目安】\n${costcut}\n約${costcutround}円程度`;
