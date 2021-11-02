@@ -12,12 +12,12 @@
 
 <body>
     <form class="w-75 mx-auto">
-        <p class="w-75 mt-3 p-2" style="background-color: #eee;">お手元に検針票をご用意の上、下記の各項目に該当値を入力すると現在のガス料金単価が算出されます。<br>判定ボタンを押すと、LINEトーク画面で判定結果がわかります。</p>
+        <p class="w-100 mt-3 mx-auto" style="background-color: #eee;">【STEP1】お手元に検針票をご用意ください。<br>【2】下記の各項目に該当値を入力してください。<br>【3】現在のガス料金単価が算出されますので、判定ボタンを押し、LINEトーク画面で判定結果を確認してください。</p>
 
         
         
         <div class="h-adr">
-            <h2 class="w-100 mt-3">お住まいの地域</h2>
+            <h3 class="w-100 mt-3">現在お住まいの地域</h3>
             <span class="form-control p-country-name mx-3 w-25 mt-3" style="display:none;">Japan</span>
 
             <p class="w-100 mt-3">郵便番号<br>（入力すると住所が自動入力されます。）</p>
@@ -81,6 +81,8 @@
             <p class="w-100 mt-3">町・番地（郵便番号から自動入力できます）</p>
             <input type="text" id="address3" name="address3" class="form-control p-street-address p-extended-address  w-75 mt-3 mx-3"/><br>
             
+            <h3 class="w-100 mt-3">現在のガス料金情報</h3>
+
             <p class="w-100 mt-3">ご請求予定金額(円)</p>
             <input class="form-control w-50 mt-3 mx-3" id="billingamount" name="billingamount" type="number" maxlength="10" value="0" min="1"><br>
             
