@@ -31,7 +31,6 @@ $(function () {
         var address1num = $('[name="address1"] option:selected').val();//番号が表示される。後続の判定用。
         var address1 = $('[name="address1"] option:selected').text();//区分値に紐づく表示項目が表示される。
         var address2 = $('input[name="address2"]').val();
-        //var address = `住所情報貼り付けテスト中`;
         
         var names = '';
         $('#form-name').children().each(function (i, elm) {
