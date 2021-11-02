@@ -28,7 +28,8 @@ $(function () {
         var date = $('input[name="date"]').val();
         var number = $('input[name="number"]:checked').val();
         
-        var address1 = $('[name="address1"] option:selected').val();//番号が表示されてしまうため役不足。
+        var address1num = $('[name="address1"] option:selected').val();//番号が表示されてしまうため役不足。
+        var address1 = $('[name="address1"] option:selected').text();//番号が表示される。
         var address2 = $('input[name="address2"]').val();
         //var address = `住所情報貼り付けテスト中`;
         
