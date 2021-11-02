@@ -28,8 +28,8 @@ $(function () {
         var date = $('input[name="date"]').val();
         var number = $('input[name="number"]:checked').val();
         
-        //        var address = $('input[name="address"]').val();
-        var address = `住所情報貼り付けテスト中`;
+        var address = $('input[name="address"]').val();
+        //var address = `住所情報貼り付けテスト中`;
         
         var names = '';
         $('#form-name').children().each(function (i, elm) {
