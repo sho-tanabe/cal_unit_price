@@ -36,6 +36,7 @@ $(function () {
 
         var costcut = (result - 280) * $('#quantity').val();
 //        var costcut = Math.floor( (result - 280) * $('#quantity').val() );//切り捨てテスト
+        var costcutround = Math.floor(costcut);
  
 
         //練習エリア終了
@@ -49,10 +50,10 @@ $(function () {
         names = names.slice(0, -1);
       
         if (result < 280){
-            var msg = `【現在のガス料金情報】\nご請求予定金額(円):${billingamount}\n基本料金(円):${basiccharge}\n今回ご使用量(㎥):${quantity}\nガス料金単価:${result}\n-----------\n【お安くなる金額目安】\n${costcut}`;
+            var msg = `【現在のガス料金情報】\nご請求予定金額(円):${billingamount}\n基本料金(円):${basiccharge}\n今回ご使用量(㎥):${quantity}\nガス料金単価:${result}\n-----------\n【お安くなる金額目安】\n${costcut}\n${costcutround}`;
             var msg2 = `Sランク`; 
         } else {
-            var msg = `【現在のガス料金情報】\nご請求予定金額(円):${billingamount}\n基本料金(円):${basiccharge}\n今回ご使用量(㎥):${quantity}\nガス料金単価:${result}\n-----------\n【お安くなる金額目安】\n${costcut}`;
+            var msg = `【現在のガス料金情報】\nご請求予定金額(円):${billingamount}\n基本料金(円):${basiccharge}\n今回ご使用量(㎥):${quantity}\nガス料金単価:${result}\n-----------\n【お安くなる金額目安】\n${costcut}\n${costcutround}`;
             var msg2 = `Bランク`; 
         }
         
