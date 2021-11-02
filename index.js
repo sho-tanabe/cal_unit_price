@@ -51,7 +51,7 @@ $(function () {
         var resultround = Math.floor(difference);
 
         //コスト削減予定額
-        var costcut = (difference - 280) * $('#quantity').val();
+        var costcut = (resultround - 280) * $('#quantity').val();
 
         //コスト削減予定額（LINEトーク送信用）
         if (costcut < 1000){
@@ -88,37 +88,6 @@ $(function () {
         
         return false;
     });
-
-
-
-
-//----------------------------------------以下住所検索テスト----------------------------------------
-
-
-//    $('#searchbtn').on('click', () => {
-//        $.ajax({
-//            url: "http://zipcloud.ibsnet.co.jp/api/search?zipcode=" + $('#postcode').val(),
-//            dataType: 'jsonp',
-//        }).done((data) => {
-//            if (data.results) { 
-//                getData(data.results[0]);
-//            } else {
-//                alert('該当データが見つかりません');
-//            }
-//        }).fail((data) => {
-//            alert('通信に失敗しました');
-//        });
-//    });
-
-//    function getData(data) {
-//        $('#pref').val(data.address1);
-//        $('#city').val(data.address2);
-//        $('#address').val(data.address3);
-//    }
-
-//----------------------------------------以上住所検索テスト----------------------------------------
-
-    
     
 
 });
