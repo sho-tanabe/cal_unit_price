@@ -63,7 +63,7 @@ $(function () {
                 var costcutmsg = `約${costcutfloor}円程度`;
                 }
         
-        var msg = `【現在のガス料金情報】\nお住まいの都道府県:${address1}\nお住まいの地域:${address2}\nご請求予定金額(円):${billingamount}\n基本料金(円):${basiccharge}\n今回ご使用量(㎥):${quantity}\nガス料金単価:${resultround}\n-----------\n【お安くなる金額目安】\n${costcutmsg}`;
+        var msg = `【現在お住まいの地域】\n${address1}\n${address2}\n【現在のガス料金情報】\nご請求予定金額(円):${billingamount}\n基本料金(円):${basiccharge}\n今回ご使用量(㎥):${quantity}\nガス料金単価:${resultround}\n-----------\n【お安くなる金額目安】\n${costcutmsg}`;
 
         if ( 7 >= address1num || address1num >= 15 ){
             var msg2 = `対象外地域`;
