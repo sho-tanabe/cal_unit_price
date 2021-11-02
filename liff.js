@@ -90,12 +90,7 @@ function refresh() {
 //----------------------------------------算出ロジック開始----------------------------------------
 
 function update_field(){    
-//    var resultabout = ( $('#billingamount').val() - $('#basiccharge').val() ) / $('#quantity').val() ;
-
-    //test
     var resultabout = Math.floor( ( $('#billingamount').val() - $('#basiccharge').val() ) / $('#quantity').val() );
-    //test    
-    
     var result = `${resultabout}円`;
     $('#unitprice').text(result);
 }
