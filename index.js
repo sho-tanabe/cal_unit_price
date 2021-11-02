@@ -50,6 +50,11 @@ $(function () {
         var difference = ( $('#billingamount').val() - $('#basiccharge').val() ) / $('#quantity').val();
         var resultround = Math.floor(difference);
 
+        //test
+        $('#unitprice').text(resultround);
+        //test
+
+        
         //コスト削減予定額
         var costcut = (resultround - 280) * $('#quantity').val();
 
