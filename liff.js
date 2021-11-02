@@ -29,7 +29,7 @@ function sendText(text) {
 //WEBブラウザアクセス以外の場合の動作↑
     } else {
         sendMessages(text);
-        sendautomail(text);
+//        sendautomail(text);
 //        sendLineNotifyMessage();//実験中。
 //        myFunction();//実験中２。
     }
