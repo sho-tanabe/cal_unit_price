@@ -24,13 +24,8 @@ function initializeLiff(liffId) {
 
 function sendText(text) {
     if (!liff.isInClient()) {
-        alert('本画面をLINE以外のブラウザで起動している場合、判定できません。スマートフォンのLINEアプリからガス料金単価計算および判定を行って下さい。');
-//        shareTargetPicker(text);
 //WEBブラウザアクセスの場合の動作↓
-//        liff.openWindow({
-//            url: "https://goofy-offer-5121.glide.page/dl//s/d0a5f4",
-//            external: true
-//        });
+        alert('本画面をLINE以外のブラウザで起動している場合、判定できません。スマートフォンのLINEアプリからガス料金単価計算および判定を行って下さい。');
 //WEBブラウザアクセスの場合の動作↑
     } else {
         sendMessages(text);
