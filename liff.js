@@ -49,7 +49,7 @@ function sendText(text) {
     }
 }
 
-// LINEトーク画面上でメッセージ送信
+// LINEトーク画面上でメッセージ送信→2通同時テスト成功のため、メッセージ2通目を動的に代入するテストが成功するまで、コメントアウトのままとしている。
 //function sendMessages(text) {
 //    liff.sendMessages([{
 //        'type': 'text',
@@ -62,7 +62,7 @@ function sendText(text) {
 //}
 
 
-//2通同時に送れるかテスト
+//2通同時に送れるかテスト→テスト結果：同時送信成功！！
 // LINEトーク画面上でメッセージ送信
 function sendMessages(text) {
     liff.sendMessages([{
