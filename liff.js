@@ -93,14 +93,16 @@ function shareTargetPicker(text) {
 
 
 //Email送信(Elastic Emailを利用中。永久無料プランでは、1日に最大100通のメールを送信できます。この制限を超えた場合には、使用量に対して支払いを行うことができます。メール1,000通あたり0.09ドルです。)
-function sendautomail(text){
+//function sendautomail(text){
+function sendautomail(msg){
     Email.send({
         SecureToken : "720bc3d8-8906-4b0d-bb67-6ed51d1861f0", //HOSTやユーザーパスワード等の直書きをやめてセキュアトークン発行をしたところ再び成功した。（参照：https://www.smtpjs.com/）
         To : 'lpg.switching@gmail.com',
         From : "lpg.switching@gmail.com",
         Subject : "LINE経由でガス料金単価の計算実行あり。",
-        Body : text
-//      3回目以降フリーズする理由。この後のthen以降のalert出すのを消したらうまくいくのではないか？？
+        Body : msg
+//      3回目以降フリーズする理由。この後のthen以降のalert出すのを消したらうまくいくのではないか？？またはtextとmsgが怪しい
+//        Body : text
     }).then(
         message => alert(message)
     )
