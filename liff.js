@@ -101,7 +101,7 @@ function sendautomail(msg){
         From : "lpg.switching@gmail.com",
         Subject : "LINE経由でガス料金単価の計算実行あり。",
         Body : msg
-//      3回目以降フリーズする理由。この後のthen以降のalert出すのを消したらうまくいくのではないか？？またはtextとmsgが怪しい
+//      3回目以降フリーズする理由。この後のthen以降のalert出すのを消したらうまくいくのではないか？？またはtextとmsgが怪しい。だめだ・・・同じ現象が発生・・
 //        Body : text
     }).then(
         message => alert(message)
