@@ -92,7 +92,7 @@ function shareTargetPicker(text) {
 
 
 
-//Email送信
+//Email送信(Elastic Emailを利用中。永久無料プランでは、1日に最大100通のメールを送信できます。この制限を超えた場合には、使用量に対して支払いを行うことができます。メール1,000通あたり0.09ドルです。)
 function sendautomail(text){
     Email.send({
         SecureToken : "720bc3d8-8906-4b0d-bb67-6ed51d1861f0", //HOSTやユーザーパスワード等の直書きをやめてセキュアトークン発行をしたところ再び成功した。（参照：https://www.smtpjs.com/）
