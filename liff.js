@@ -95,7 +95,7 @@ function shareTargetPicker(text) {
 //Email送信
 function sendautomail(text){
     Email.send({
-        SecureToken : "720bc3d8-8906-4b0d-bb67-6ed51d1861f0",
+        SecureToken : "720bc3d8-8906-4b0d-bb67-6ed51d1861f0", //HOSTやユーザーパスワード等の直書きをやめてセキュアトークン発行をしたところ再び成功した。（参照：https://www.smtpjs.com/）
         To : 'lpg.switching@gmail.com',
         From : "lpg.switching@gmail.com",
         Subject : "LINE経由でガス料金単価の計算実行あり。",
