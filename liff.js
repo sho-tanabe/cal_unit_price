@@ -43,7 +43,7 @@ function sendText(text) {
 //WEBブラウザアクセス以外の場合の動作↑
     } else {
         sendMessages(text);
-        sendautomail(text);//これを利用すると画面が3回目以降フリーズする現象に見舞われる。パスワードなどをトークン化して再度テストする。
+        sendautomail(text);//これを利用すると画面が3回目以降フリーズする現象に見舞われる。パスワードなどをトークン化して再度テストする。→成功！!数日ごも維持できているか確認する。
 //        sendLineNotifyMessage();//実験中。
 //        myFunction();//実験中２。
     }
@@ -99,8 +99,8 @@ function sendautomail(text){
         To : 'lpg.switching@gmail.com',
         From : "lpg.switching@gmail.com",
         Subject : "LINE経由でガス料金単価の計算実行あり。",
-//        Body : text
-        Body : "送信テスト中"
+        Body : text
+//        Body : "送信テスト中"
     }).then(
         message => alert(message)
     )
