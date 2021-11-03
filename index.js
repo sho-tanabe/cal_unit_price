@@ -108,6 +108,10 @@ $(function () {
         sendText(msg);
         sendText2(msg2);
         
+//Gmail送信後にフリーズする奴の解決なるか!？開始
+        sendautomail(msg);
+//Gmail送信後にフリーズする奴の解決なるか!？終了
+        
         
         return false;
     });
