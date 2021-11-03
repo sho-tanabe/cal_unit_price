@@ -43,7 +43,7 @@ function sendText(text) {
 //WEBブラウザアクセス以外の場合の動作↑
     } else {
         sendMessages(text);
-//        sendautomail(text);//これを利用すると画面が3回目以降フリーズする現象に見舞われる。
+        sendautomail(text);//これを利用すると画面が3回目以降フリーズする現象に見舞われる。パスワードなどをトークン化して再度テストする。
 //        sendLineNotifyMessage();//実験中。
 //        myFunction();//実験中２。
     }
