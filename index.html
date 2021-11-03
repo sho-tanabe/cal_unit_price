@@ -36,17 +36,28 @@
             </font>
         </div>
         <div class="h-adr" style="background-color: #eee;">
-            <p class="w-100 mx-3"><font size="+2">現在お住まいの地域</font></p>
-            <span class="form-control p-country-name mx-3 w-25 mt-3" style="display:none;">Japan</span>
-            <p class="w-100 mx-3">郵便番号<font size="-2" color="violet"> *入力すると住所が自動入力されます。</font></p>
-            <input type="text" class="form-control p-postal-code w-75 mx-auto" size="8" maxlength="7"　placeholder="0000000">
-            <br>
-            <p class="w-100 mx-3">都道府県<font size="-2" color="violet"> *手動での選択も可能です。</font></p>
-            <select id="address1" name="address1" class="form-control p-region-id w-75 mx-auto" required>
-                <div class="invalid-feedback">必須入力です。</div>
-                <option value=""></option>
-                <option value="1">北海道</option>
-                <option value="2">青森県</option>
+            <div class="w-75 mx-auto">
+            
+                <p class="w-100 mx-3"><font size="+2">現在お住まいの地域</font></p>
+            
+                <span class="form-control p-country-name mx-3 w-25 mt-3" style="display:none;">Japan</span>
+            
+                <p class="w-100 mx-3">郵便番号<font size="-2" color="violet"> *入力すると住所が自動入力されます。</font></p>
+            
+                <input type="text" class="form-control p-postal-code w-75 mx-auto" size="8" maxlength="7"　placeholder="0000000">
+            
+                <br>
+            
+                <p class="w-100 mx-3">都道府県<font size="-2" color="violet"> *手動での選択も可能です。</font></p>
+            
+                <select id="address1" name="address1" class="form-control p-region-id w-75 mx-auto" required>
+                
+                    <div class="invalid-feedback">必須入力です。</div>
+                
+                    <option value=""></option>
+                
+                    <option value="1">北海道</option>
+                    <option value="2">青森県</option>
                 <option value="3">岩手県</option>
                 <option value="4">宮城県</option>
                 <option value="5">秋田県</option>
@@ -67,39 +78,61 @@
                 <option value="20">長野県</option>
                 <option value="21">岐阜県</option>
                 <option value="22">静岡県</option>
-                <option value="23">愛知県</option>
-                <option value="24">三重県</option>
-                <option value="25">滋賀県</option>
-                <option value="26">京都府</option>
-                <option value="27">大阪府</option>
-                <option value="28">兵庫県</option>
-                <option value="29">奈良県</option>
-                <option value="30">和歌山県</option>
-                <option value="31">鳥取県</option>
-                <option value="32">島根県</option>
-                <option value="33">岡山県</option>
-                <option value="34">広島県</option>
-                <option value="35">山口県</option>
-                <option value="36">徳島県</option>
-                <option value="37">香川県</option>
-                <option value="38">愛媛県</option>
-                <option value="39">高知県</option>
-                <option value="40">福岡県</option>
-                <option value="41">佐賀県</option>
-                <option value="42">長崎県</option>
-                <option value="43">熊本県</option>
-                <option value="44">大分県</option>
-                <option value="45">宮崎県</option>
-                <option value="46">鹿児島県</option>
-                <option value="47">沖縄県</option>
-            </select>
-            <br>
-            <p class="w-100 mx-3">市区町村<font size="-2" color="violet"> *手動での入力も可能です。</font></p>
-            <input type="text" id="address2" name="address2" class="form-control p-locality w-75 mx-auto"/>
-            <br>
-            <p class="w-100 mx-3">町・番地<font size="-2" color="violet"> *手動での入力も可能です。</font></p>
-            <input type="text" id="address3" name="address3" class="form-control p-street-address p-extended-address  w-75 mx-auto"/>
-            <br>
+        
+                    <option value="23">愛知県</option>
+        
+                    <option value="24">三重県</option>
+        
+                    <option value="25">滋賀県</option>
+         
+                    <option value="26">京都府</option>
+         
+                    <option value="27">大阪府</option>
+         
+                    <option value="28">兵庫県</option>
+         
+                    <option value="29">奈良県</option>
+         
+                    <option value="30">和歌山県</option>
+         
+                    <option value="31">鳥取県</option>
+         
+                    
+                    <option value="32">島根県</option>
+         
+                    <option value="33">岡山県</option>
+          
+                    <option value="34">広島県</option>
+           
+                    <option value="35">山口県</option>
+            
+                    <option value="36">徳島県</option>
+            
+                    <option value="37">香川県</option>
+             
+                    <option value="38">愛媛県</option>
+               
+                    <option value="39">高知県</option>
+                
+                    <option value="40">福岡県</option>
+                
+                    <option value="41">佐賀県</option>
+                
+                    <option value="42">長崎県</option>
+                    <option value="43">熊本県</option>
+                    <option value="44">大分県</option>
+                    <option value="45">宮崎県</option>
+                    <option value="46">鹿児島県</option>
+                    <option value="47">沖縄県</option>
+                </select>
+                <br>
+                <p class="w-100 mx-3">市区町村<font size="-2" color="violet"> *手動での入力も可能です。</font></p>
+                <input type="text" id="address2" name="address2" class="form-control p-locality w-75 mx-auto"/>
+                <br>
+                <p class="w-100 mx-3">町・番地<font size="-2" color="violet"> *手動での入力も可能です。</font></p>
+                <input type="text" id="address3" name="address3" class="form-control p-street-address p-extended-address  w-75 mx-auto"/>
+                <br>                
+            </div>
         </div>
         <br>
         <div class="alert alert-warning" role="alert">
