@@ -19,7 +19,7 @@ $(function () {
     });
 
     
-    //ブラウザバリデーション
+    //ブラウザバリデーション　→ 原因不明だがトーク投稿に至らないため、失敗。いったんコメントアウト中。ここが悪いのではなくhtml側の問題かもしれない。。。調査中。
 
 //    $(function () {
 //        var forms = document.querySelectorAll('.needs-validation');
