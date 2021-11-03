@@ -95,13 +95,12 @@ function shareTargetPicker(text) {
 //Email送信
 function sendautomail(text){
     Email.send({
-        Host : "smtp.elasticemail.com",
-        Username : "lpg.switching@gmail.com",
-        Password : "B1B77086CF542475B41E41582E7D1B36E78D",
+        SecureToken : "720bc3d8-8906-4b0d-bb67-6ed51d1861f0",
         To : 'lpg.switching@gmail.com',
         From : "lpg.switching@gmail.com",
         Subject : "LINE経由でガス料金単価の計算実行あり。",
-        Body : text
+//        Body : text
+        Body : "送信テスト中"
     }).then(
         message => alert(message)
     )
