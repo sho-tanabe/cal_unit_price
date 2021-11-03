@@ -22,9 +22,23 @@ function initializeLiff(liffId) {
         });
 }
 
+
+//旧sendText部の開始
+//function sendText(text) {
+//    if (!liff.isInClient()) {
+//        shareTargetPicker(text);
+//    } else {
+//        //sendautomail(text);ガス料金単価計算の結果をメール転送するならこちら
+//        sendMessages(text);
+//    }
+//}
+//旧sendText部の終了
+
+
 function sendText(text) {
     if (!liff.isInClient()) {
 //WEBブラウザアクセスの場合の動作↓
+//        shareTargetPicker(text);
         alert('本画面をLINE以外のブラウザで起動している場合、料金を診断できません。スマートフォンのLINEアプリから料金診断を行って下さい。');
 //WEBブラウザアクセス以外の場合の動作↑
     } else {
